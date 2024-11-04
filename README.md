@@ -70,6 +70,7 @@ To do so, in the root folder, open a terminal and build the software in a `build
 mkdir build
 cd build
 cmake ..
+make
 ```
 
 ## run test

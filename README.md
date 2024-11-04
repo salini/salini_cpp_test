@@ -199,3 +199,16 @@ python main_client_gui.py
 ## Notes
 
 * For now, the bookings are available while the server is running, but the modifications are not saved in the json "database". Meaning that when the server is restarted, the booking states are reset to the value in the json "database".
+
+
+## Reflection
+
+### What aspect of this exercise did you find the most interesting?
+
+During this exercice, the interesting part was to develop the algorithms and the unit tests to validate the concepts gradually.
+It was also interesting to get more and more ideas on how to interact the the booking backend, inside the same process, outside the process, with another program/language.
+
+### What did you find most cumbersome?
+
+I would say that the setup the of the Booking server gave a bit more trouble than other parts in the program.
+Even if there is a unit test to handle multiple requests simultaneously, it requires more time to have a good stress test on network issues (large delay, disconnection, etc.)

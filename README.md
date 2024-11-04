@@ -6,7 +6,6 @@ This software is an exercice to implement a booking backend service in C++ for b
 
 This package contains the following folders:
 
-* doc: documentation files
 * ext: external dependencies, header-only libraries
 * python: some python script files, to create some test files and communicate with server
 * src: the main source code, containing the source for the booking libraries and executables

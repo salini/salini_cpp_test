@@ -125,7 +125,7 @@ TEST_CASE("Check ZMQ connection") {
     server.shutdown();
 }
 
-TEST_CASE("Check simultaneous request") {
+TEST_CASE("Check simultaneous requests") {
     string filepath = string(TEST_DIR) + "/test_movie_sessions.json";
     int port = 8888;
     BookingServer server(filepath, port, 1000.0);

@@ -107,6 +107,9 @@ Note that the default "database" has been generated in python using the script `
 This default "database" is saved in `test/test_movie_sessions.json`.
 Of course, it is possible to write another database, and to use it with the argument `--filepath`.
 
+Note that the booking server accept only one request at a time, it should not be possible to do any overbooking.
+This is tested in the TEST_CASE: "Check simultaneous requests"
+
 ## run booking client
 
 Now that the server is ready, any program can communicate with the server by using ZeroMQ.
@@ -164,12 +167,12 @@ To book seats, `<request_arguments>` can be the following:
 Because the communication is interprocess, it is possible to send this request from another program that the one generated in C++.
 For instance, a small python script has been written to emulate the booking client `python/main_client.py`
 
-it isnecessary to install pyzmq to communicate with the server:
+it is necessary to install pyzmq to communicate with the server:
 ```
 pip install pyzmq
 ```
 
-and run it:
+Then one can run it:
 ```
 python main_client.py
 ```
@@ -177,6 +180,21 @@ python main_client.py
 Note that this script does not need to run in Ubuntu. It can run Windows while the server is running on WSL/Ubuntu.
 
 
+## run GUI booking client 
+
+To check if it was possible to communicate with the booking server with a GUI, a GUI booking client has been created in python `python/main_client_gui.py`
+
+it is necessary to install pyside6 to get the GUI:
+```
+pip install PySide6
+```
+
+Then one can run it:
+```
+python main_client_gui.py
+```
+
+
 ## Notes
 
-* For now, the booking are available while the server is running, but the modifications are not saved in the json "database". Meaning that when the server is restarted, the booking states are reset to the value in the json "database".
+* For now, the bookings are available while the server is running, but the modifications are not saved in the json "database". Meaning that when the server is restarted, the booking states are reset to the value in the json "database".

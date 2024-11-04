@@ -42,7 +42,7 @@ bool Session::seats_are_available(const vector<string>& seat_names) {
         if (seats.find(s) == seats.end()) {
             return false;
         }
-        if (seats[s] != 0) { // it is booked
+        if (seats[s] != 0) { // it is already booked
             return false;
         }
     }

@@ -12,6 +12,11 @@ using namespace std;
 
 using namespace booking;
 
+
+Booking::Booking() {
+
+}
+
 Booking::Booking(const string& filepath) {
 
     movies.clear();

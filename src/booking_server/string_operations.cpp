@@ -1,5 +1,7 @@
 #include "string_operations.h"
 
+#include <sstream>
+
 using namespace std;
 
 
@@ -17,11 +19,11 @@ vector<string> split_string(const string& str) {
     return splitted;
 }
 
-string join_vector_strings(const vector<string>& strings) {
+string join_vector_strings(const vector<string>& words) {
     string concatenate;
-    for (size_t idx=0; idx<strings.size(); ++idx) {
-        concatenate += strings[idx];
-        if (idx < strings.size() -1) {
+    for (size_t idx=0; idx<words.size(); ++idx) {
+        concatenate += words[idx];
+        if (idx < words.size() -1) {
             concatenate += " ";
         }
     }
